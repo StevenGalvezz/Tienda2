@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
  *
  * @author xsf
  */
-/**@Service
+@Service
 public interface FirebaseStorageService {
 
     //*public String cargaImagen(MultipartFile archivoLocalCliente, String carpeta, Long id);
@@ -24,4 +24,4 @@ public interface FirebaseStorageService {
     final String rutaJsonFile = "firebase";
     // El nombre del archivo Json
     final String archivoJsonFile = "techshop-70262-firebase-adminsdk-ftnwx-0442f8d411.json";
-}**/
+}

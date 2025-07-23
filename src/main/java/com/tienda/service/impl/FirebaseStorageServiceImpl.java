@@ -12,7 +12,7 @@ import com.google.cloud.storage.BlobInfo;
 import com.google.auth.Credentials;
 import com.google.auth.ServiceAccountSigner;
 import com.google.auth.oauth2.GoogleCredentials;
-//import com.tienda.service.FirebaseStorageService;
+import com.tienda.service.FirebaseStorageService;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,9 +25,10 @@ import org.springframework.web.multipart.MultipartFile;
  *
  * @author xsf
  */
-/**@Service
+@Service
 public class FirebaseStorageServiceImpl implements FirebaseStorageService {
-    @Override
+    
+    
     public String cargaImagen(MultipartFile archivoLocalCliente, String carpeta, Long id) {
         try {
             // El nombre original del archivo local del cliente
@@ -91,4 +92,4 @@ public class FirebaseStorageServiceImpl implements FirebaseStorageService {
     private String sacaNumero(long id) {
         return String.format("%019d", id);
     }
-}**/
+}

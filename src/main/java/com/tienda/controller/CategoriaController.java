@@ -6,7 +6,7 @@ package com.tienda.controller;
 
 import com.tienda.domain.Categoria;
 import com.tienda.service.CategoriaService;
-//import com.tienda.service.impl.FirebaseStorageServiceImpl;
+import com.tienda.service.impl.FirebaseStorageServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,7 +42,7 @@ public class CategoriaController {
         return "/categoria/modifica";
     }
     
-    /**@Autowired
+    @Autowired
     private FirebaseStorageServiceImpl firebaseStorageService;
 
     @PostMapping("/guardar")
@@ -58,14 +58,14 @@ public class CategoriaController {
         }
         categoriaService.save(categoria);
         return "redirect:/categoria/listado";
-    }**/
-
+    }
+    
     @GetMapping("/eliminar/{idCategoria}")
     public String categoriaEliminar(Categoria categoria) {
         categoriaService.delete(categoria);
         return "redirect:/categoria/listado";
     }
-
+    
     @GetMapping("/modificar/{idCategoria}")
     public String categoriaModificar(Categoria categoria, Model model) {
         categoria = categoriaService.getCategoria(categoria);
