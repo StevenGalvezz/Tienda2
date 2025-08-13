@@ -22,7 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="container">
                     <a th:href="@{/}" class="navbar-brand mb-0 h1">[[#{aplicacion.titulo}]]</a>
                     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                        "navbar-toggler-icon"></span>
+                        "navbar-toggler-icon">
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <ul class="navbar-nav" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')">
@@ -100,3 +100,4 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
     </body>
+</html>
